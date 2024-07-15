@@ -1,15 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>API de Fotos da NASA</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov">
-    
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov"
+    />
+  </head>
+  <body>
+    <!-- Loader -->
+    <div class="loader hidden">
+      <img src="rocket.svg" alt="Rocker Loader" />
+    </div>
+    <!-- Container -->
+    <div class="container">
+      <!-- Nav -->
+      <div class="navigation-container">
+        <span class="background"></span>
+        <!-- Nav Resultados -->
+        <span class="navigation-items" id="resultsNav">
+          <h3 class="clickable" onclick='updateDOM("favorites")'>Favoritos</h3>
+          <h3>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
+          <h3 class="clickable" onclick='getNasaPictures()'>Carregar Mais</h3>
+        </span>
+        <!-- Nav Favoritos -->
+        <span class="navigation-items hidden" id="favoritesNav">
+          <h3 class="clickable" onclick='getNasaPictures()'>Carregar Mais Imagens da Nasa</h3>
+        </span>
+      </div>
+      <!-- Container de Imagens -->
+      <div class="images-container">
+        <!-- <div class="card">
+          <a href="" title="Ver Imagem Completa" target="_blank">
+            <img
+              src="https://apod.nasa.gov/apod/image/2007/msv1500crop.jpg"
+              alt="Foto do dia da NASA"
+              class="card-img-top"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Título da Imagem</h5>
+            <p class="clickable">Adicionar aos Favoritos</p>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+              asperiores dolore beatae minus! Pariatur officiis, saepe ea
+              necessitatibus soluta iusto facere, ipsam expedita illo cum quia
+              velit autem aliquid accusantium?
+            </p>
+            <small class="text-muted">
+              <strong>12-12-2022</strong>
+              <span>Copyright</span>
+            </small>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <!-- Salvar confirmação -->
+    <div class="save-confirmed" hidden>
+      <h1>Favorito Adicionado!</h1>
+    </div>
     <!-- Script -->
     <script src="script.js"></script>
-</body>
-</html> 
+  </body>
+</html>
